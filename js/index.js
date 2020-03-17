@@ -100,7 +100,7 @@
     });
     $(window).mousewheel(function (event) {
         var courseTop = Math.ceil($(".course .inner").offset().top)
-        var hTop = Math.ceil($h*0.08+28)
+        var hTop = Math.ceil($h*0.08)
         console.log(courseTop)
         console.log(hTop)
         if(courseTop <= hTop && courseTop!=0){
