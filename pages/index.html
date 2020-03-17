@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="../css/swiper.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+  <div class="swiper-container swiper-container-v swiper-no-swiping">
+    <div class="box bo1">
+    </div>
+    <div class="box bo2">
+    </div>
+    <header>
+      <img src="../static/imgs/logo1.png" alt="" class="logo">
+      <ul class="nav">
+        <li onclick="slideTo(0)">关于我们</li>
+        <li>加入CJ</li>
+        <li onclick="slideTo(4)">CJ业务</li>
+        <li>CJ动态</li>
+        <li>供应商招募</li>
+        <li onclick="slideTo(5)">联系我们</li>
+      </ul>
+    </header>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide home">
+        <video autoplay loop muted>
+          <source type="video/mp4" src="../static/video.mp4">
+          Your browser does not support the video playback.
+        </video>
+        <p class="mouse">
+          <img src="../static/imgs/mouse.png" alt="">
+        </p>
+        <div>
+          <p><span>全球货</span><span>发全球</span></p>
+          <p>Global goods Send the world</p>
+        </div>
+      </div>
+      <div class="swiper-slide seller">
+        <div class="inner">
+          <div>
+            <h3 class="head">遍布全球的卖家用户<small>Seller user</small></h3>
+            <p class="text">
+              CJ帮助全球卖家专注于Shopify，Woocommerce，eBay，Amazon，Lazada，Shopee市场营销。解决产品采购，订单处理和运送等其他事宜。让用户保持保持高度竞争力。截至于2019年12月，CJ拥有10万卖家，覆盖全球224个国家和地区，日均发送包裹数十万个。
+            </p>
+          </div>
+          <img src="../static/imgs/shoe.png" class="shoe" alt="">
+          <img src="../static/imgs/person1.png" class="person1" alt="">
+        </div>
+      </div>
+      <div class="swiper-slide product">
+        <div class="inner">
+          <div class="pleft">
+            <div class="cup">
+              <img src="../static/imgs/cup.png" alt="">
+              <div class="protext">
+                <h2>10w +</h2>
+                <p>智能</p>
+                <p>保显保温杯</p>
+              </div>
+            </div>
+            <div class="earphone">
+              <img src="../static/imgs/earphone.png" alt="">
+              <div class="protext">
+                <h2>2w +</h2>
+                <p>智能</p>
+                <p>蓝牙耳机</p>
+              </div>
+            </div>
+            <div class="cloth">
+              <img src="../static/imgs/cloth.png" alt="">
+              <div class="protext">
+                <h2>8w +</h2>
+                <p>智能</p>
+                <p>蓝牙耳机</p>
+              </div>
+            </div>
+          </div>
+          <div class="pright">
+            <h2>通过专业服务<br>满足您<br>的关键需求</h2>
+            <hr>
+            <p>通过互联网技术和战略客户管理，解决您最棘手的电子商务难题。提供企业帐户管理，技术支持和服务，为你的产品提高销量。</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide warehouse">
+        <div class="inner">
+            <div class="pleft wbox">
+              <div>
+                <h2></h2>
+                <hr>
+                <p></p>
+                <img src="../static/imgs/sz.png" alt="">
+              </div>
+            </div>
+            <div class="pright">
+              <div class="tabtns">
+                <a href="#" class="active" onclick="getInfo('yw')">义乌</a>
+                <a href="#" onclick="getInfo('sz')">深圳</a>
+                <a href="#" onclick="getInfo('xzx')">新泽西</a>
+                <a href="#" onclick="getInfo('jlfny')">加利福尼亚</a>
+                <a href="#" onclick="getInfo('mg')">曼谷</a>
+                <a href="#" onclick="getInfo('yjd')">雅加达</a>
+              </div>
+              <div class="earth">
+                <img src="../static/imgs/cloth.png" alt="">
+              </div>
+              <div class="wtext">
+                <h2>建立全球仓<br>让您的<br>货更快到达</h2>
+                <hr>
+                <p>通过各个国家和地区，建立当地仓库。提供更快的发货速度，让商品迅速到达，节约时间的同时也让买家享受更好的送货服务。</p>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide company">
+        <div class="inner">
+          <div class="imgTab">
+            <div class="swiper-container swiper-container-h">
+              <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="../static/imgs/hz.png" alt="">
+                    <p>
+                      <img src="../static/imgs/at.png" alt="">
+                      <span>IT开发部</span><span>杭州</span><span>•</span><span>钱江创投中心</span>
+                    </p>
+                  </div>
+              </div>
+              <div class="swiper-pagination swiper-pagination-h"></div>
+          </div>
+          </div>
+          <div class="info">
+            <h4>义乌市促佳贸易有限公司</h4>
+            <p>义乌市促佳贸易有限公司是一家专业从事跨境电商的科技型公司。公司占地近15000平方米，分别设立义乌，杭州，深圳，新泽西，加利福尼亚，曼谷，雅加达等分支。公司拥有当今国内领先水平的一件代发供应链体系，在践行“一流商品质量、一流物流质量、一流服务质量”的“三一流”价值观上，把发展经济、提升科技，不断为社会解决就业、培育人才作为企业的宗旨。不断对员工进行企业文化的教育与熏陶。</p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide course">
+        <div class="swiper-container" id="swiper-container2">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="inner">         
+                <div class="ctext">
+                  <h2>促佳永远<br>砥砺前行</h2>
+                  <hr>
+                  <p>义乌市促佳贸易有限公司，2015年进入外贸电商行业，砥砺前行。至2019年12月拥有10万卖家，覆盖全球224个国家和地区，日均发送包裹数十万个。将仓库建到了美国、印尼、泰国。从一件代发业务发展到采购、仓储、物流的全流程服务。</p>
+                </div>
+                <div class="text">
+                  <h3></h3>
+                  <div>
+                  </div>
+                </div>  
+                <div class="textTab">
+                  <a href="#" onclick="getCourseInfo('2015')">2015</a>
+                  <a href="#" onclick="getCourseInfo('2016')">2016</a>
+                  <a href="#" onclick="getCourseInfo('2017')">2017</a>
+                  <a href="#" onclick="getCourseInfo('2018')">2018</a>
+                  <a href="#" onclick="getCourseInfo('2019')">2019</a>
+                </div>                
+              </div>
+              <div class="footer">
+                <div>
+                  <div class="dy">
+                    <img class="ewm" src="../static/imgs/ewm.png" alt="">
+                    <div class="dt">
+                      <p class="ligt">扫描二维码</p>
+                      <p>下载CJDropshipping手机版应用</p>
+                    </div>
+                  </div>
+                  <div class="local">
+                    <div id="container"></div>
+                    <div> 
+                      <p class="ligt">义乌市促佳贸易有限公司</p>
+                      <p class="ligt">电话：</p>
+                      <p>(0571) 8671 9839</p>
+                      <p class="ligt">地址：</p>
+                      <p>杭州市，西湖区，天目山路钱江创投中心</p>
+                    </div>
+                  </div>
+                </div>              
+                <div class="goto">
+                  <img src="../static/imgs/cjlogo.png" alt="">
+                  <a href="">CJPacket</a>
+                  <a href="">JewelShipping</a>
+                  <a href="">Comeorders</a>
+                  <p>Copyright © 2020  义乌市促佳贸易有限公司 版权所有.     浙ICP备19045742号.</p>
+                </div>
+              </div>
+             </div>
+          </div>          
+         
+          <div class="swiper-scrollbar"></div>
+        </div>      
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/jquery.js"></script>
+  <script src="../js/jquery.mousewheel.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/move.js"></script>
+  <!-- <script src="https://webapi.amap.com/maps?v=1.4.15&key=095e6b6d46d782cacba552dbd7975a66"></script> -->
+  <script src="../js/index.js"></script>
+</body>
+
+</html>

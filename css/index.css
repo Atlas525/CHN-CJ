@@ -1,0 +1,807 @@
+@import 'reset.css';
+
+
+html,
+body {
+  position: relative;
+  height: 100%;
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  overflow: auto
+}
+
+#swiper-container2 .swiper-slide {
+  font-size: 18px;
+  height: auto;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  color: #fff;
+
+}
+
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  -webkit-filter: grayscale(20%);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 999;
+  padding: 0 100px;
+  box-sizing: border-box;
+}
+
+header .logo {
+  width: 320px;
+}
+
+header .nav {
+  display: flex;
+  float: right;
+}
+
+header .nav li {
+  margin: 30px 50px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.home,
+.company,
+.course {
+  background-color: #161616;
+}
+
+.home div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home div p {
+  color: #fff;
+  font-size: 32px;
+  text-align: center;
+}
+
+.home div p:first-child {
+  font-size: 72px;
+  margin-bottom: 17px;
+}
+
+.home div p span:first-child {
+  margin-right: 42px;
+}
+
+.home .mouse {
+  position: absolute;
+  bottom: 80px;
+  width: 34px;
+  animation: myfirst 1s ease infinite;
+}
+
+.home .mouse img {
+  width: 100%;
+}
+
+@keyframes myfirst {
+  from {
+    bottom: 80px
+  }
+
+  to {
+    bottom: 100px;
+  }
+}
+
+@-webkit-keyframes myfirst
+
+/* Safari 与 Chrome */
+  {
+  from {
+    bottom: 80px;
+  }
+
+  to {
+    bottom: 100px;
+  }
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  height: 82%;
+  width: 85%;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  margin-left: -42.5%;
+  box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+}
+
+.bo1 {
+  top: 95%;
+  opacity: 1;
+}
+
+.bo2 {
+  top: 100%;
+  opacity: 0;
+}
+
+.inner {
+  height: 80%;
+  width: 85%;
+  border-radius: 10px;
+  border: 1px solid #979797;
+  position: relative;
+  overflow: hidden;
+  /* background: url(../static/imgs/nodata.png) center center no-repeat; */
+}
+
+.seller,
+.product {
+  background-color: #fff;
+}
+
+.seller .inner:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-bottom: 450px solid #F2F2F2;
+  border-left: 600px solid transparent;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 4;
+}
+
+.seller .inner div {
+  color: #333;
+  font-size: 18px;
+  padding-left: 12%;
+}
+
+.seller h3 {
+  font-size: 52px;
+  width: 262px;
+  position: relative;
+  margin: 15% 0 5% 0;
+  font-weight: 500;
+}
+
+.seller h3 small {
+  position: absolute;
+  right: -60px;
+  bottom: 10px;
+  font-family: PingFangSC-Ultralight, PingFang SC;
+  font-weight: 200;
+  color: rgba(51, 51, 51, 1);
+}
+
+.seller p {
+  width: 509px;
+  line-height: 1.5;
+}
+
+.seller .head,
+.seller .text {
+  display: none;
+}
+
+.seller .person1 {
+  position: absolute;
+  width: 30%;
+  right: 26%;
+  bottom: -8%;
+  z-index: 9;
+  display: none;
+}
+
+.seller .shoe {
+  position: absolute;
+  width: 28%;
+  right: 6%;
+  bottom: 8%;
+  z-index: 9;
+  display: none;
+}
+
+.product .pleft {
+  width: 69%;
+  height: 100%;
+  background: #000 url(../static/imgs/line.png) bottom no-repeat;
+  background-size: 100%;
+  position: relative;
+  float: left;
+}
+
+.product .pright {
+  float: left;
+  width: 31%;
+  height: 100%;
+  padding: 7.5% 4% 0 4%;
+  box-sizing: border-box;
+  display: none;
+}
+
+.product .pleft>div {
+  display: inline-block;
+  color: #fff;
+  text-align: center;
+  display: none;
+}
+
+.product .pleft img {
+  width: 118%;
+  position: absolute;
+  z-index: 9;
+}
+
+.product .cup img {
+  top: -33%;
+  left: -13%;
+}
+
+.product .earphone img {
+  top: -28%;
+  left: -15%;
+  width: 126%;
+}
+
+.product .cloth img {
+  top: -46%;
+  left: -22%;
+  width: 145%;
+}
+
+.product .cup,
+.product .earphone,
+.product .cloth {
+  position: absolute;
+  width: 17%;
+  height: 55%;
+  background: linear-gradient(174deg, rgba(245, 73, 75, 1) 0%, rgba(183, 58, 121, 1) 100%);
+  bottom: 0;
+  left: 15%;
+  border-radius: 16px 16px 0px 0px;
+}
+
+.product .earphone {
+  height: 68%;
+  left: 40%;
+  background: linear-gradient(180deg, rgba(0, 112, 248, 1) 0%, rgba(105, 65, 255, 1) 100%);
+}
+
+.product .cloth {
+  height: 50%;
+  left: 65%;
+  background: linear-gradient(360deg, rgba(162, 65, 255, 1) 0%, rgba(130, 0, 244, 1) 100%);
+}
+
+.product .protext {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+}
+
+.product .protext h2 {
+  margin-bottom: 10%;
+  font-size: 50px;
+}
+
+.product .protext p {
+  margin-bottom: 10px;
+}
+
+.product .pright h2 {
+  font-weight: 400;
+  color: #333;
+  font-size: 54px;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+
+.product .pright p,
+.warehouse .pright p,
+.course .ctext p {
+  font-size: 18px;
+  margin-top: 28%;
+  line-height: 25px;
+}
+
+.warehouse .pleft p {
+  font-size: 18px;
+}
+
+.product hr,
+.warehouse .wtext hr,
+.warehouse .pleft hr,
+.course .ctext hr {
+  width: 170px;
+  background-color: #F7A85A;
+  height: 1px;
+  border: none;
+  margin: 40px 0 60px;
+}
+
+.warehouse {
+  background-color: #000;
+}
+
+.warehouse .inner {
+  box-sizing: border-box;
+}
+
+.warehouse .pright {
+  width: 5000px;
+  height: 100%;
+}
+
+.warehouse .pright>div {
+  float: left;
+}
+
+.warehouse .tabtns {
+  width: 6%;
+  padding: 50px 0;
+  display: none;
+}
+
+.warehouse .tabtns a {
+  display: block;
+  color: #666;
+  position: relative;
+  padding-left: 120px;
+  font-size: 18px;
+  line-height: 50px;
+}
+
+.warehouse .tabtns a:before {
+  content: "";
+  width: 20px;
+  height: 1px;
+  position: absolute;
+  left: 45px;
+  top: 25px;
+  background-color: #666;
+}
+
+.warehouse .tabtns a.active {
+  color: #fff;
+}
+
+.warehouse .tabtns a.active:before {
+  width: 50px;
+  background-color: #fff;
+}
+
+.warehouse .earth {
+  width: 15%;
+  display: none;
+}
+
+.warehouse .earth img {
+  width: 100%;
+}
+
+.warehouse div.wtext {
+  color: #fff;
+  width: 10%;
+  height:100%;
+  padding: 120px 70px;
+  box-sizing: border-box;
+}
+
+.warehouse .wtext h2,
+.warehouse .pright p {
+  display: none;
+}
+
+.warehouse .wtext h2,
+.warehouse .pleft h2,
+.course .ctext h2 {
+  font-size: 52px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  line-height: 1;
+  line-height: 63px;
+}
+
+.warehouse .pleft {
+  background-color: #161616;
+  width: 0;
+  height: 100%;
+  color: #fff;
+  float: left;
+  position: relative;
+  opacity: 0;
+}
+
+.warehouse .pleft div {
+  height:100%;
+  box-sizing: border-box;
+  padding: 100px 60px;
+}
+
+.warehouse .pleft div img {
+  width: 74%;
+  height: 37.5%;
+  position: absolute;
+  left: 13%;
+  bottom: 6%;
+}
+
+.company .inner,
+.course .inner {
+  border: none;
+  display: none;
+}
+
+.company .imgTab {
+  height: 70%;
+  overflow: hidden;
+  color: #fff;
+}
+
+.company .imgTab p {
+  position: absolute;
+  bottom: 43px;
+  left: 100px;
+}
+
+.company .imgTab p img {
+  width: 26px;
+  position: relative;
+  top: -10px;
+  left: -20px
+}
+
+.company .imgTab p span {
+  margin-right: 10px;
+  font-size: 24px;
+}
+
+.company .imgTab img {
+  height: 100%;
+  width: 100%;
+}
+
+.company .info {
+  height: 30%;
+  padding: 40px 100px;
+  font-size: 18px;
+  background-color: #161616;
+  box-sizing: border-box;
+}
+
+.company .info p {
+  color: #999;
+  line-height: 25px;
+}
+
+.company .info h4 {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.company .swiper-pagination {
+  text-align: right;
+  bottom: 30px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.company .swiper-pagination-bullet {
+  width: 80px;
+  height: 6px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 15px;
+}
+
+.company .my-bullet-active {
+  background: #fff;
+  opacity: 1;
+}
+
+.course .inner {
+  background: url(../static/imgs/course.png) no-repeat;
+  background-size: 100% 100%;
+  color: #fff;
+  margin: auto;
+  top: 8%;
+  height: 54%;
+}
+
+.course .text {
+  padding: 50px 60px;
+  display: none;
+}
+
+.course .text h3 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.course .text p {
+  font-size: 18px;
+  line-height: 2.5;
+}
+
+.course .text p span {
+  color: #FA6400;
+  font-size: 32px;
+  margin: 0 5px;
+  line-height: 1;
+}
+
+.course .text h4 {
+  -webkit-line-clamp: 2;
+  background-image: -webkit-linear-gradient(left, rgba(246, 108, 35, 1), rgba(246, 108, 35, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 50px;
+  font-weight: normal;
+  margin-top: 20px;
+}
+
+.course .text h4 img {
+  height: 35px;
+  width: 29px;
+  position: relative;
+  top: -5px;
+  left: 20px;
+}
+
+.course .textTab {
+  position: absolute;
+  bottom: 60px;
+  left: 70px;
+}
+
+.course .textTab:after {
+  content: "";
+  height: 1px;
+  width: 466px;
+  background-color: rgba(255, 255, 255, .26);
+  position: absolute;
+  bottom: -12px;
+  left: -55px;
+}
+
+.course .textTab a {
+  margin-right: 40px;
+  font-size: 14px;
+  color: #999;
+  position: relative;
+}
+
+.course .textTab a.active {
+  color: #fff;
+}
+
+.course .textTab a.active:after {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FA6400;
+  position: absolute;
+  bottom: -17px;
+  left: 12px;
+}
+
+.course .ctext {
+  color: #fff;
+  width: 33%;
+  padding: 6.5% 4.5%;
+  box-sizing: border-box;
+}
+
+.footer {
+  width:72%;
+  height: 540px;
+  margin: 80px auto;
+  position: relative;
+  top: 10%;
+  font-size: 14px;
+  clear: both;
+}
+
+.footer .dy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #686B6E;
+  width:400px;
+  height:126px;
+  padding:8px 7px;
+  box-sizing: border-box;
+  margin-right: 173px;
+}
+
+.footer .ewm {
+  width: 125px;
+  height: auto;
+}
+
+.footer .ewm img {
+  width: 100%;
+}
+
+.footer .dt {
+  padding:38px 0 0 27px;
+  height: 100%;
+  width:100%;
+}
+
+.footer .dt p {
+  line-height: 34px;
+  color: #9FA3A6;
+}
+.footer .local p{
+  color: #9FA3A6;
+}
+.footer p.ligt {
+  color: #fff;
+}
+.footer .local{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.footer .local div p{
+  margin-bottom: 18px;
+  padding-left: 34px;
+}
+.footer>div:first-child{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.footer .goto {
+  position: relative;
+}
+.footer .goto img{
+  margin-right: 56px;
+  width:32px;
+}
+.footer .goto:after {
+  content: "";
+  height: 1px;
+  width: 100%;
+  background: #686B6E;
+  position: absolute;
+  top: 36px;
+}
+
+.footer .goto a {
+  display: inline-block;
+  margin: 0 56px 42px 0;
+  color: #A8ACAF;
+}
+
+.footer .goto p {
+  color: #666;
+}
+@media screen and (max-width:1440px){
+  .inner{
+    height: 78%;
+  }
+  .seller h3{
+    margin: 12% 0 5% 0;
+  }
+  .seller p{
+    width: 450px;
+  }
+  .product .pright h2,.product .protext h2,.warehouse .wtext h2, .warehouse .pleft h2, .course .ctext h2{
+    font-size: 44px;
+  }
+  .warehouse .earth{
+    width:10%;
+  }
+  .warehouse div.wtext {
+    width: 9%;
+    padding: 91px 76px;
+  }
+  .warehouse .pleft div {
+    padding: 9% 15%;
+  }
+  .course .inner {
+    height: 53%;
+  }
+  .product hr,
+  .warehouse .wtext hr,
+  .warehouse .pleft hr,
+  .course .ctext hr {
+    margin: 5% 0 7%;
+  }
+  .warehouse .pleft p,.product .pright p, .warehouse .pright p, .course .ctext p,.course .text p{
+    font-size: 16px;
+  }
+}
+@media screen and (min-width:1441px) and (max-width:1680px) {
+  .warehouse .earth {
+    width: 13%;
+    display: none;
+  }
+  .warehouse .pleft div{
+    padding:11%;
+  }
+
+  .course .inner {
+    height: 57%;
+  }
+
+  .footer {
+    width: 72%;
+    height: 520px;
+  }
+
+  .warehouse .tabtns {
+    width: 5%;
+  }
+
+  .warehouse div.wtext {
+    padding: 100px 60px;
+  }
+  .product hr,
+  .warehouse .wtext hr,
+  .warehouse .pleft hr,
+  .course .ctext hr {
+    margin: 5% 0 7%;
+  }
+
+}
+#container {
+  width:300px; 
+  height: 168px;
+ }
