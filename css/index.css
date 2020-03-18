@@ -30,7 +30,6 @@ body {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-  overflow: auto
 }
 
 #swiper-container2 .swiper-slide {
@@ -40,6 +39,7 @@ body {
   box-sizing: border-box;
   display: block;
   color: #fff;
+  padding-bottom: 30px;
 
 }
 
@@ -75,7 +75,7 @@ header .nav {
   float: right;
 }
 
-header .nav li {
+header .nav a {
   margin: 30px 50px;
   font-size: 14px;
   cursor: pointer;
@@ -168,7 +168,7 @@ header .nav li {
 }
 
 .inner {
-  height: 80%;
+  height: 79%;
   width: 85%;
   border-radius: 10px;
   border: 1px solid #979797;
@@ -426,7 +426,7 @@ header .nav li {
 .warehouse div.wtext {
   color: #fff;
   width: 10%;
-  height:100%;
+  height: 100%;
   padding: 120px 70px;
   box-sizing: border-box;
 }
@@ -458,7 +458,7 @@ header .nav li {
 }
 
 .warehouse .pleft div {
-  height:100%;
+  height: 100%;
   box-sizing: border-box;
   padding: 100px 60px;
 }
@@ -553,13 +553,14 @@ header .nav li {
   background: url(../static/imgs/course.png) no-repeat;
   background-size: 100% 100%;
   color: #fff;
-  margin: auto;
-  top: 8%;
-  height: 54%;
+  margin:6% auto 0;
+  height: 56%;
 }
 
 .course .text {
-  padding: 50px 60px;
+  width: 33%;
+  padding: 6.5% 4.5%;
+  box-sizing: border-box;
   display: none;
 }
 
@@ -645,13 +646,14 @@ header .nav li {
 }
 
 .footer {
-  width:72%;
-  height: 540px;
-  margin: 80px auto;
+  width: 72%;
+  margin: 100px auto;
   position: relative;
-  top: 10%;
-  font-size: 14px;
   clear: both;
+}
+
+.footer p {
+  font-size: 14px;
 }
 
 .footer .dy {
@@ -659,9 +661,9 @@ header .nav li {
   justify-content: center;
   align-items: center;
   border: 1px solid #686B6E;
-  width:400px;
-  height:126px;
-  padding:8px 7px;
+  width: 372px;
+  height: 126px;
+  padding: 8px 7px;
   box-sizing: border-box;
   margin-right: 173px;
 }
@@ -676,44 +678,52 @@ header .nav li {
 }
 
 .footer .dt {
-  padding:38px 0 0 27px;
+  padding: 38px 0 0 27px;
   height: 100%;
-  width:100%;
+  width: 100%;
 }
 
 .footer .dt p {
   line-height: 34px;
   color: #9FA3A6;
 }
-.footer .local p{
+
+.footer .local p {
   color: #9FA3A6;
 }
+
 .footer p.ligt {
   color: #fff;
 }
-.footer .local{
+
+.footer .local {
   display: flex;
   justify-content: center;
   align-items: center;
 
 }
-.footer .local div p{
+
+.footer .local div p {
   margin-bottom: 18px;
   padding-left: 34px;
 }
-.footer>div:first-child{
+
+.footer>div:first-child {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
 }
+
 .footer .goto {
   position: relative;
 }
-.footer .goto img{
+
+.footer .goto img {
   margin-right: 56px;
-  width:32px;
+  width: 32px;
 }
+
 .footer .goto:after {
   content: "";
   height: 1px;
@@ -727,63 +737,94 @@ header .nav li {
   display: inline-block;
   margin: 0 56px 42px 0;
   color: #A8ACAF;
+  font-size: 14px;
 }
 
 .footer .goto p {
   color: #666;
 }
-@media screen and (max-width:1440px){
-  .inner{
+
+@media screen and (max-width:1440px) {
+  .inner {
     height: 78%;
   }
-  .seller h3{
+
+  .seller h3 {
     margin: 12% 0 5% 0;
   }
-  .seller p{
+
+  .seller p {
     width: 450px;
   }
-  .product .pright h2,.product .protext h2,.warehouse .wtext h2, .warehouse .pleft h2, .course .ctext h2{
+
+  .product .pright h2,
+  .product .protext h2,
+  .warehouse .wtext h2,
+  .warehouse .pleft h2,
+  .course .ctext h2 {
     font-size: 44px;
   }
-  .warehouse .earth{
-    width:10%;
+
+  .warehouse .earth {
+    width: 10%;
   }
+
   .warehouse div.wtext {
     width: 9%;
     padding: 91px 76px;
   }
+
   .warehouse .pleft div {
     padding: 9% 15%;
   }
+
   .course .inner {
-    height: 53%;
+    height: 52%;
   }
+
   .product hr,
   .warehouse .wtext hr,
   .warehouse .pleft hr,
   .course .ctext hr {
     margin: 5% 0 7%;
   }
-  .warehouse .pleft p,.product .pright p, .warehouse .pright p, .course .ctext p,.course .text p{
+  .warehouse .tabtns a{
     font-size: 16px;
   }
+
+  .warehouse .pleft p,
+  .product .pright p,
+  .warehouse .pright p,
+  .course .ctext p,
+  .course .text p {
+    font-size: 16px;
+  }
+
+  .course .text {
+    padding: 5% 4%;
+  }
+
+  .footer {
+    width: 82%;
+  }
 }
+
 @media screen and (min-width:1441px) and (max-width:1680px) {
   .warehouse .earth {
     width: 13%;
     display: none;
   }
-  .warehouse .pleft div{
-    padding:11%;
+
+  .warehouse .pleft div {
+    padding: 11%;
   }
 
   .course .inner {
-    height: 57%;
+    height: 52%;
   }
 
   .footer {
     width: 72%;
-    height: 520px;
   }
 
   .warehouse .tabtns {
@@ -793,15 +834,25 @@ header .nav li {
   .warehouse div.wtext {
     padding: 100px 60px;
   }
+
   .product hr,
   .warehouse .wtext hr,
   .warehouse .pleft hr,
   .course .ctext hr {
     margin: 5% 0 7%;
   }
+  .course .inner {
+    margin:6% auto 0;
+    height: 52%;
+  }
+  
+  .course .text {
+    padding: 4.5% 4%;
+  }
 
 }
+
 #container {
-  width:300px; 
+  width: 300px;
   height: 168px;
- }
+}

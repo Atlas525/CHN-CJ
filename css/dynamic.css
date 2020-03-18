@@ -1,0 +1,76 @@
+
+body{
+  background: #fff;
+  height:auto;
+}
+header {
+  background: #fff;
+}
+header .nav a{
+  color:#333;
+}
+.dynamic .title{
+  height:128px;
+  background-color: #F7F8F9;
+  margin-top: 80px;
+  padding:33px 25%;
+  box-sizing: border-box;
+}
+.dynamic .title h2{
+  font-weight:400;
+  font-size: 32px;
+  color:#666;
+  font-family:PingFangSC-Regular,PingFang SC;
+}
+.dynamic .title p{
+  font-size: 12px;
+  color:#666;
+}
+.dynamic .content{
+  padding:10px 25% 124px;
+}
+.dynamic .content li{
+  margin-top: 40px;
+  cursor: pointer;
+}
+.dynamic .content li img,.dynamDetail  .content img{
+  width:100%;
+}
+.dynamic .content li h3{
+  margin:20px 0 10px;
+  color:#333;
+  font-size: 18px;
+}
+.dynamDetail .content{
+  background-color: #fff;
+}
+.dynamDetail .content h2{
+  font-size: 18px;
+  color:#F9912A;
+  font-weight: normal;
+  margin:40px 0 20px;
+}
+.dynamDetail  .content h3{
+  text-align: center;
+  width:80%;
+  margin:100px auto 44px;
+  font-size: 18px;
+  color:#333;
+}
+.dynamDetail  .content p{
+  font-size: 14px;
+  color:#666;
+  text-indent: 28px;
+  margin: 30px 0;
+}
+
+.content p.time{
+  font-size: 16px;
+  color:#999;
+  text-indent: 0;
+}
+.content p.time img{
+  width:16px;
+  position: relative;
+  top:-2px;
+}

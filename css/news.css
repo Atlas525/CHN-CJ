@@ -1,0 +1,126 @@
+
+header .nav a{
+  color:#333;
+}
+
+.news .inner{
+  box-shadow:0px 0px 40px 0px rgba(0,0,0,0.25);
+  border:none;
+  padding:20px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.flexBox{
+  height:48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexBox>div{
+  height:100%;
+}
+.flexBox>div img{
+  width:100%;
+  height:100%;
+}
+.flexBox .banner{
+  width:71%;
+  background:url(../static/imgs/hz.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+  margin-right: 20px;
+}
+.flexBox .banner div{
+  color:#fff;
+  text-align: center;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+.flexBox .banner div h3{
+  font-size:42px;
+  letter-spacing:26px;
+  font-weight: 500;
+  text-indent: 26px;
+}
+.flexBox .banner div p{
+  font-size: 29px;
+}
+.flexBox ul{
+  width:29%;
+  height:100%;
+  overflow: auto;
+}
+.flexBox ul li{
+  height:17%;
+  padding:14px 10px;
+  background-color: #F7F8F9;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+.flexBox ul li h5{
+  font-size: 14px;
+  font-weight:400;
+  line-height:1;
+  color:#333;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.flexBox ul li p{
+  text-align: right;
+  font-size: 12px;
+  color:#999;
+}
+.flexBox .smallBoxs{  
+  width:70%;
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flexBox .smallBoxs .lis{
+  width:23.5%;
+  height:100%;
+  padding:20px;
+  box-sizing: border-box;
+  border:1px solid #E8E8E8;
+  position: relative;
+}
+.smallBoxs .lis img{
+  width:100%;
+  height:45%;
+  margin-bottom: 10%;
+}
+.lis h4{
+  font-size: 14px;
+}
+.lis p{
+  font-size: 12px;
+}
+.lis p:last-child{
+  position: absolute;
+  bottom:20px;
+  left:20px;
+}
+.more{
+  width:29%;
+  background: url(../static/imgs/jlfny.png)no-repeat;
+  background-size: 100% 100%;
+}
+.more a{
+  display: block;
+  width:70%;
+  line-height:50px;
+  background-color: #fff;
+  color:#333;
+  font-size: 14px;
+  text-align: center;
+  border-radius:4px;
+  margin:50% auto;
+}
+
+
+
+
