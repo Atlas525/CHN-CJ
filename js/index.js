@@ -92,7 +92,8 @@ var mySwiper = new Swiper('.swiper-container-v', {
                     },
                 })
                 //默认滑到顶部
-                document.getElementsByClassName("course")[0].scrollIntoView();
+                //document.getElementsByClassName("course")[0].scrollIntoView();
+                $('html,body').animate({scrollTop: '0px'}, 800)
             }
         },
     },
