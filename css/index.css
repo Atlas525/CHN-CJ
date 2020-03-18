@@ -43,7 +43,7 @@ body {
 
 }
 
-video {
+video.indexV {
   position: fixed;
   right: 0;
   bottom: 0;
@@ -416,10 +416,11 @@ header .nav a {
 
 .warehouse .earth {
   width: 15%;
+  margin-top: 3%;
   display: none;
 }
 
-.warehouse .earth img {
+.warehouse .earth video {
   width: 100%;
 }
 
