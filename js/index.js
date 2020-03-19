@@ -55,6 +55,7 @@ var mySwiper = new Swiper('.swiper-container-v', {
                 $(".warehouse .tabtns,.warehouse .wtext h2").fadeIn(1000, function () {
                     $(".warehouse .wtext p").fadeIn(1000)
                 })
+                $(".warehouse .tabtns a").removeClass("active")
                 navToW()
             } else if (activeIndex == 4) {
                 oWBox.style.width = 0
@@ -104,8 +105,7 @@ var goIndex = location.href.split("#")[1]
 if(goIndex){
     mySwiper.slideTo(goIndex)
 }
-$(document).on('mousewheel DOMMouseScroll', onMouseScroll);
-function onMouseScroll(){
+$(document).on('mousewheel', function(){
     var courseTop = Math.ceil($(".course .inner").offset().top)
     var hTop = Math.ceil($h * 0.1)
     if (courseTop <= hTop && courseTop != 0) {
@@ -113,9 +113,12 @@ function onMouseScroll(){
     } else {
         mySwiper.mousewheel.enable()
     }
-}
+});
 function slideTo(index) {
     mySwiper.slideTo(index)
+    // if(index==5){
+    //     document.getElementsByClassName("footer")[0].scrollIntoView(false);
+    // }
 }
 $(".product .pleft div").hover(function () {
     $(this).children("img").animate({ top: '-=30px' });
