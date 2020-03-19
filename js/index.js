@@ -104,7 +104,8 @@ var goIndex = location.href.split("#")[1]
 if(goIndex){
     mySwiper.slideTo(goIndex)
 }
-$(window).mousewheel(function (event) {
+$(document).on('mousewheel DOMMouseScroll', onMouseScroll);
+function onMouseScroll(){
     var courseTop = Math.ceil($(".course .inner").offset().top)
     var hTop = Math.ceil($h * 0.1)
     if (courseTop <= hTop && courseTop != 0) {
@@ -112,7 +113,7 @@ $(window).mousewheel(function (event) {
     } else {
         mySwiper.mousewheel.enable()
     }
-})
+}
 function slideTo(index) {
     mySwiper.slideTo(index)
 }

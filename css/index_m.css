@@ -46,9 +46,9 @@ body {
 }
 .home video{
   width:100%;
-  height:27rem;
+  height:28rem;
   object-fit:fill;
-  border-radius: 2rem;
+  border-radius: 1rem;
 }
 .seller{
   background:#F4F4F4 url(../static/imgs/seller.png) 0 50% no-repeat;
@@ -58,6 +58,9 @@ body {
   margin-top:25%;
   padding:0 1.5rem;
   color:#333;
+}
+.product .text{
+  margin-top:28%;
 }
 .seller .text p:first-child{
   font-weight: 200;
@@ -106,27 +109,28 @@ body {
 .warehouse .text,.course .text{
   padding:1.5rem;
 }
-.inner button{
+.inner a{
   color:#fff;
   background: #000;
   border-radius:8px;
   border:1px solid rgba(247,168,90,1);
   font-size: 1rem;
   width:8rem;
-  height:3rem;
+  line-height:3rem;
   position: absolute;
   bottom:1.5rem;
   left:1.5rem;
-  padding-right: .7rem;
+  padding:0 .7rem;
+  text-align: center;
 }
-.inner button i {
+.inner a i {
   border: solid #F7A85A;
   border-width: 0 1px 1px 0;
   display: inline-block;
   padding: 3px;
   margin-left: .5rem;
 }
-.inner button .right {
+.inner a .right {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
@@ -134,15 +138,12 @@ body {
   background: url(../static/imgs/course.png) center bottom no-repeat;
   background-size: 100% 45%;
 }
-.info,.subscribe{
-  height:35rem!important;
-}
 .info h3{
   text-align: center;
   font-size: 1.3rem;
   color:#333;
   position: relative;
-  margin-bottom: 3rem;
+  margin:2rem 0 4rem;
 }
 .info h3:after{
   content: "";
@@ -165,15 +166,15 @@ body {
 }
 #container {
   width: 100%;
-  height: 12rem;
-  margin-bottom: 6rem;
+  height: 14rem;
+  margin-bottom: 7rem;
 }
 .subscribe .ewm{
   width:8rem;
   height:8rem;
   border:1px solid #686B6E;
   padding:.4rem;
-  margin:4.5rem auto 3rem;
+  margin:4.5rem auto;
 }
 .subscribe .ewm img{
   width:100%;
@@ -186,14 +187,16 @@ body {
 }
 .subscribe .cjlogo{
   display: block;
-  margin:2rem auto;
+  margin:6rem auto 2rem;
 }
 .subscribe .links{
-  padding-left: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .subscribe a{
   color:#A8ACAF;
-  margin-right: 1rem;
+  margin:0 1rem;
 }
 .subscribe.swiper-slide{
   padding:0;
@@ -209,3 +212,216 @@ body {
   margin-top: 2rem;
   padding-left: 0;
 }
+
+/* 仓库分页 */
+.warehousePage,.coursePage{
+  width:100%;
+  height:100%;
+  background-color: #161616;
+  color:#fff;
+}
+.fixedtop{
+  position: fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index: 9;
+}
+.topline{
+  background-color: #fff;
+  height:2.5rem;
+}
+.warehouseTab,.courseTab{
+  height:2.5rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #434343;
+}
+.courseTab{
+  margin:3.5rem 2rem 2rem;
+  justify-content: center;
+}
+.warehouseTab a,.courseTab a{
+  color:#999;
+  display: inline-block;
+  margin:0 .6rem;
+  line-height:2.5rem;
+  position: relative;
+  font-size: 1rem;
+}
+.courseTab a{
+  font-size: .8rem;
+  margin:0 .8rem;
+}
+.warehouseTab a.active,.courseTab a.active{
+  color:#fff;
+}
+.warehouseTab a.active:after,.courseTab a.active:after{
+  content: "";
+  width:100%;
+  height:2px;
+  background-color: #F9912A;
+  position: absolute;
+  bottom:0;
+  left:0;
+}
+.courseTab a.active:after{
+  width:6px;
+  height:6px;
+  border-radius: 50%;
+  margin-left: -3px;
+  left:50%;   
+  bottom:-3px;
+}
+.warehousePage .swiper-slide{
+  margin-top: 7rem;
+  position: relative;
+}
+.coursePage .swiper-slide{
+  margin-top: 10rem;
+  position: relative;
+  padding-left: 3rem;
+}
+.warehousePage .swiper-slide h3{
+  font-weight:900;
+  font-size: 1.7rem;
+  position: relative;
+}
+.coursePage .swiper-slide h3{
+  font-weight:500;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+}
+.coursePage .swiper-slide h4{
+  font-weight:500;
+  font-size: 2rem;
+  -webkit-line-clamp: 2;
+  background-image: -webkit-linear-gradient(left, rgba(246, 108, 35, 1), rgba(246, 108, 35, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.coursePage .swiper-slide h4 img{
+  width: 1rem;
+  position: relative;
+  top: 0;
+  left: .5rem;
+}
+.warehousePage .swiper-slide h3:after{
+  content: "";
+  width:6rem;
+  height:1px;
+  position: absolute;
+  background-color: #F7A85A;
+  bottom:-1rem;
+  left:0;
+}
+.warehousePage .swiper-slide p{
+  margin-top: 3rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.coursePage .swiper-slide p{
+  font-size: 1rem;
+  line-height: 2;
+}
+.coursePage .swiper-slide p span{
+  color:#FA6400;
+  font-size:1.6rem;
+  margin:0 .3rem;
+  line-height: 1;
+}
+.warehousePage .swiper-slide img{
+  width:88%;
+  position: absolute;
+  bottom:15rem;
+  left:1.5rem;
+}
+.courseImg{
+  width:100%;
+  padding:0 2rem;
+  position: fixed;
+  bottom:6rem;
+  left:0;
+  box-sizing: border-box;
+}
+.courseImg img{
+  width:100%;
+}
+.footer{
+  width:100%;
+  position: fixed;
+  bottom:2rem;
+  left:0;
+}
+.footer p{
+  text-align: center;
+  color:#666;
+  font-size: .8rem;
+}
+@media screen and (max-width:320px) {
+  html,
+  body {
+    font-size: 12px;
+  }
+}
+@media screen and (min-width:321px) and (max-width:414px) {
+  html,
+  body {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width:415px) {
+  html,
+  body {
+    font-size: 16px;
+  }
+  .swiper-slide {
+    padding: 3rem;
+  }
+  .home video {
+    height: 34rem;
+  }
+  .seller {
+    background: #F4F4F4 url(../static/imgs/seller.png) 41% 50% no-repeat;
+    background-size: 92% 80%;
+  }
+  .seller .text, .product .text {
+    padding: 0 3.5rem;
+  }
+  .product {
+    background: #8B5C26 url(../static/imgs/product.png) 41% 50% no-repeat;
+    background-size: 92% 80%;
+  }
+  .warehouse .inner, .course .inner {
+    width: 92%;
+  }
+  #container {
+    height: 23rem;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
